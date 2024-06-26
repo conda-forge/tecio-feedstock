@@ -1,5 +1,5 @@
 {% set name = "tecio" %}
-{% set version = "2.0.3" %}
+{% set version = "2.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tecio-{{ version }}.tar.gz
-  sha256: 0d7ce6caf7a217c65d9a846e18de3a7d8c691beb0a8c33c4e10a30d5eed300d0
+  sha256: c89835af0a95bd803b996bcc60be6deb58b50f864b8d014d09febf10a85dc51a
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
